@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use & FAQ — CryptoMood Dash | Crypto Sentiment Guide</title>
+    <meta name="description" content="Learn how to use CryptoMood Dash to track crypto market sentiment. Step-by-step guide and frequently asked questions about the Fear & Greed Index.">
+    <meta name="keywords" content="how to use fear and greed index, crypto sentiment guide, bitcoin fear greed FAQ, cryptocurrency market mood, crypto trading tool">
+    <link rel="canonical" href="https://cryptomood-dash.vercel.app/how-to-use.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="How to Use CryptoMood Dash — Guide & FAQ">
+    <meta property="og:description" content="Step-by-step guide on using the Crypto Fear & Greed Index dashboard, plus answers to common questions.">
+    <meta property="og:image" content="https://cryptomood-dash.vercel.app/assets/og-image.svg">
+    <meta property="og:url" content="https://cryptomood-dash.vercel.app/how-to-use.html">
+    <meta property="og:site_name" content="CryptoMood Dash">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Use CryptoMood Dash — Guide & FAQ">
+    <meta name="twitter:description" content="Step-by-step guide and FAQ for the Crypto Fear & Greed Index dashboard.">
+    <meta name="twitter:image" content="https://cryptomood-dash.vercel.app/assets/og-image.svg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: '#0f1019',
+                        card: '#16213e',
+                        accent: '#00d4aa',
+                        textPrimary: '#e0e0e0',
+                        textSecondary: '#8a8aa0',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-bg text-textPrimary min-h-screen font-sans">
+
+    <header class="w-full py-4 px-4 border-b border-gray-800">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <a href="/" class="text-xl md:text-2xl font-bold hover:opacity-90">
+                <span class="text-accent">Crypto</span>Mood Dash
+            </a>
+            <nav class="flex gap-4 text-sm text-textSecondary">
+                <a href="/" class="hover:text-accent transition-colors">Dashboard</a>
+                <a href="/how-to-use.html" class="text-accent">Guide</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-10">
+
+        <article>
+            <h1 class="text-3xl md:text-4xl font-bold mb-6">How to Use CryptoMood Dash</h1>
+            <p class="text-textSecondary text-lg mb-8">A complete guide to reading the dashboard, interpreting the Fear & Greed Index, and making better-informed crypto decisions.</p>
+
+            <!-- 3-Step Guide -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-semibold text-accent mb-6">3-Step Quick Start Guide</h2>
+
+                <div class="space-y-6">
+                    <div class="bg-card rounded-2xl p-6 md:p-8 shadow-lg shadow-black/20">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center text-accent font-bold text-lg">1</div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Check the Fear & Greed Gauge</h3>
+                                <p class="text-textPrimary leading-relaxed mb-3">
+                                    When you open CryptoMood Dash, the first thing you'll see is the semicircular gauge at the top of the page. This gauge displays the current Crypto Fear & Greed Index value on a scale of 0 to 100. The needle and color tell you the market's emotional state at a glance:
+                                </p>
+                                <ul class="list-disc list-inside text-textSecondary space-y-1 ml-4">
+                                    <li><strong class="text-textPrimary">0–20 (Red):</strong> Extreme Fear — investors are very worried, potential buying opportunity</li>
+                                    <li><strong class="text-textPrimary">21–40 (Orange):</strong> Fear — market is nervous but not panicking</li>
+                                    <li><strong class="text-textPrimary">41–60 (Yellow):</strong> Neutral — balanced sentiment, no strong bias</li>
+                                    <li><strong class="text-textPrimary">61–80 (Light Green):</strong> Greed — optimism is rising, be cautious</li>
+                                    <li><strong class="text-textPrimary">81–100 (Green):</strong> Extreme Greed — market may be overheated, potential correction ahead</li>
+                                </ul>
+                                <p class="text-textSecondary mt-3 text-sm">
+                                    Below the gauge, you'll find historical values for yesterday, last week, and last month — this helps you understand the trend direction, not just the current snapshot.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-card rounded-2xl p-6 md:p-8 shadow-lg shadow-black/20">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center text-accent font-bold text-lg">2</div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Review Top Coin Prices</h3>
+                                <p class="text-textPrimary leading-relaxed mb-3">
+                                    Scroll down to the cryptocurrency price grid showing the top 10 coins by market capitalization. Each card displays:
+                                </p>
+                                <ul class="list-disc list-inside text-textSecondary space-y-1 ml-4">
+                                    <li><strong class="text-textPrimary">Coin icon and name</strong> — instantly recognizable</li>
+                                    <li><strong class="text-textPrimary">Current price in USD</strong> — updated every 60 seconds</li>
+                                    <li><strong class="text-textPrimary">24-hour price change</strong> — green (up) or red (down) percentage</li>
+                                    <li><strong class="text-textPrimary">7-day sparkline</strong> — a mini chart showing the weekly price trend</li>
+                                </ul>
+                                <p class="text-textSecondary mt-3 text-sm">
+                                    Cross-reference the Fear & Greed Index with individual coin performance. For example, if the index shows "Extreme Fear" but Bitcoin is only down 2%, the fear might be driven by altcoin performance or external news rather than a broad market crash.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-card rounded-2xl p-6 md:p-8 shadow-lg shadow-black/20">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center text-accent font-bold text-lg">3</div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Make Informed Decisions</h3>
+                                <p class="text-textPrimary leading-relaxed mb-3">
+                                    Use the combination of sentiment data and price movements to inform — not dictate — your investment decisions. Here are practical strategies used by experienced traders:
+                                </p>
+                                <ul class="list-disc list-inside text-textSecondary space-y-1 ml-4">
+                                    <li><strong class="text-textPrimary">Dollar-Cost Averaging (DCA) with sentiment:</strong> Increase your regular buy amounts during periods of Extreme Fear, reduce during Extreme Greed.</li>
+                                    <li><strong class="text-textPrimary">Contrarian signal:</strong> Historically, periods of Extreme Fear have often preceded market recoveries, while Extreme Greed has preceded corrections.</li>
+                                    <li><strong class="text-textPrimary">Confirmation tool:</strong> If your own analysis suggests buying, and the Fear & Greed Index is in the Fear zone, that's additional confirmation. If the index contradicts your thesis, investigate further before acting.</li>
+                                    <li><strong class="text-textPrimary">Risk management:</strong> During Extreme Greed periods, tighten your stop-losses and take partial profits. During Extreme Fear, widen your stops to avoid being shaken out.</li>
+                                </ul>
+                                <p class="text-textSecondary mt-3 text-sm">
+                                    Click the "Check Sentiment" button to log the current market state — useful for tracking your own sentiment checks over time.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section>
+                <h2 class="text-2xl font-semibold text-accent mb-6">Frequently Asked Questions</h2>
+
+                <div class="space-y-4">
+
+                    <div class="bg-card rounded-2xl p-6 shadow-lg shadow-black/20">
+                        <h3 class="text-lg font-semibold mb-3">What is the Crypto Fear & Greed Index?</h3>
+                        <p class="text-textPrimary leading-relaxed mb-3">
+                            The Crypto Fear & Greed Index is a daily metric developed by <a href="https://alternative.me" class="text-accent hover:underline" target="_blank" rel="noopener noreferrer">Alternative.me</a> that measures the overall emotional sentiment of the cryptocurrency market. It analyzes six data sources — market volatility, trading volume and momentum, social media activity, investor surveys, Bitcoin dominance, and Google Trends search data — to produce a single number between 0 and 100.
+                        </p>
+                        <p class="text-textPrimary leading-relaxed">
+                            A score of 0 represents "Extreme Fear," indicating that investors are very anxious and potentially selling in panic. A score of 100 represents "Extreme Greed," suggesting investors are overly optimistic and the market may be due for a correction. The index is conceptually similar to the CNN Fear & Greed Index used for traditional stock markets, adapted specifically for cryptocurrency market dynamics.
+                        </p>
+                    </div>
+
+                    <div class="bg-card rounded-2xl p-6 shadow-lg shadow-black/20">
+                        <h3 class="text-lg font-semibold mb-3">How often is the data updated?</h3>
+                        <p class="text-textPrimary leading-relaxed mb-3">
+                            The Fear & Greed Index is calculated once per day by Alternative.me, typically around 00:00 UTC. On CryptoMood Dash, the gauge checks for new data every 5 minutes to ensure you always see the latest value as soon as it's published.
+                        </p>
+                        <p class="text-textPrimary leading-relaxed">
+                            Cryptocurrency prices are sourced from CoinGecko and refresh automatically every 60 seconds. CoinGecko aggregates price data from hundreds of exchanges worldwide, so the prices you see represent a volume-weighted average across all major trading platforms. You never need to manually refresh the page — all data updates happen in the background.
+                        </p>
+                    </div>
+
+                    <div class="bg-card rounded-2xl p-6 shadow-lg shadow-black/20">
+                        <h3 class="text-lg font-semibold mb-3">Should I buy when the index shows Extreme Fear?</h3>
+                        <p class="text-textPrimary leading-relaxed mb-3">
+                            The classic investment wisdom of "buy when others are fearful" has historically shown merit in the crypto market. Analysis of past data shows that buying during periods of Extreme Fear (index below 20) and holding for 30+ days has often resulted in positive returns. However, this is not financial advice, and past performance does not guarantee future results.
+                        </p>
+                        <p class="text-textPrimary leading-relaxed mb-3">
+                            Important caveats to consider:
+                        </p>
+                        <ul class="list-disc list-inside text-textSecondary space-y-1 ml-4">
+                            <li>Extreme Fear can persist for weeks or months during bear markets — "catching a falling knife" is a real risk</li>
+                            <li>The index doesn't account for fundamental changes (regulation, exchange collapses, protocol failures)</li>
+                            <li>Individual coins can behave very differently from the overall market sentiment</li>
+                            <li>Always use the index as one of many tools in your decision-making process, never as the sole indicator</li>
+                        </ul>
+                        <p class="text-textPrimary leading-relaxed mt-3">
+                            <strong>CryptoMood Dash is an informational tool, not an investment advisor.</strong> Always do your own research and never invest more than you can afford to lose.
+                        </p>
+                    </div>
+
+                    <div class="bg-card rounded-2xl p-6 shadow-lg shadow-black/20">
+                        <h3 class="text-lg font-semibold mb-3">Why does the dashboard only show 10 coins?</h3>
+                        <p class="text-textPrimary leading-relaxed mb-3">
+                            CryptoMood Dash is intentionally designed as a "quick-glance" dashboard. The top 10 cryptocurrencies by market capitalization represent over 85% of the total crypto market value and are the coins that most investors and traders interact with. By focusing on these 10 coins, we keep the dashboard clean, fast-loading, and easy to scan in seconds.
+                        </p>
+                        <p class="text-textPrimary leading-relaxed">
+                            If you need detailed data on smaller altcoins, portfolio tracking, or advanced charting, we recommend dedicated platforms like <a href="https://www.coingecko.com" class="text-accent hover:underline" target="_blank" rel="noopener noreferrer">CoinGecko</a> or <a href="https://coinmarketcap.com" class="text-accent hover:underline" target="_blank" rel="noopener noreferrer">CoinMarketCap</a>. CryptoMood Dash is designed to complement those tools, not replace them — it's the dashboard you check first, before diving deeper elsewhere.
+                        </p>
+                    </div>
+
+                    <div class="bg-card rounded-2xl p-6 shadow-lg shadow-black/20">
+                        <h3 class="text-lg font-semibold mb-3">Is CryptoMood Dash free to use?</h3>
+                        <p class="text-textPrimary leading-relaxed">
+                            Yes, CryptoMood Dash is completely free and always will be. There is no account registration, no premium tier, and no hidden paywalls. The dashboard is supported by non-intrusive advertising. All data comes from free, publicly available APIs (Alternative.me for the Fear & Greed Index and CoinGecko for cryptocurrency prices). We believe that basic market sentiment information should be accessible to every investor regardless of their portfolio size.
+                        </p>
+                    </div>
+
+                    <div class="bg-card rounded-2xl p-6 shadow-lg shadow-black/20">
+                        <h3 class="text-lg font-semibold mb-3">What does the "Check Sentiment" button do?</h3>
+                        <p class="text-textPrimary leading-relaxed">
+                            The "Check Sentiment" button allows you to log the current market sentiment data at the moment you view it. When clicked, it records the current Fear & Greed Index value and your basic session information (screen size, timestamp). This data can be connected to a Google Sheets backend for personal tracking purposes. Think of it as a "snapshot" button — useful if you want to build a personal log of when you checked the market and what the sentiment was at that time. No personally identifiable information is collected.
+                        </p>
+                    </div>
+
+                    <div class="bg-card rounded-2xl p-6 shadow-lg shadow-black/20">
+                        <h3 class="text-lg font-semibold mb-3">Can I use CryptoMood Dash on my phone?</h3>
+                        <p class="text-textPrimary leading-relaxed">
+                            Absolutely. CryptoMood Dash is built with a mobile-first responsive design. The layout automatically adapts to any screen size — from a 320px smartphone to a 4K desktop monitor. The gauge scales proportionally, coin cards stack vertically on small screens and expand into a grid on larger displays, and all touch targets meet the recommended 44px minimum size for comfortable mobile interaction. For the best mobile experience, you can add CryptoMood Dash to your phone's home screen — it will open like a native app without browser controls taking up space.
+                        </p>
+                    </div>
+
+                    <div class="bg-card rounded-2xl p-6 shadow-lg shadow-black/20">
+                        <h3 class="text-lg font-semibold mb-3">How accurate is the price data?</h3>
+                        <p class="text-textPrimary leading-relaxed mb-3">
+                            Price data is sourced from CoinGecko, which aggregates real-time price information from over 800 cryptocurrency exchanges worldwide. Prices shown are volume-weighted averages, meaning they account for trading activity across all major platforms. This method provides a more reliable price than any single exchange.
+                        </p>
+                        <p class="text-textPrimary leading-relaxed">
+                            Prices on CryptoMood Dash refresh every 60 seconds. Due to this refresh interval, you may see slight differences compared to real-time trading platforms that update every second. For actual trading execution, always use your exchange's live order book. CryptoMood Dash is designed for market overview and sentiment tracking, not for millisecond-precise trading decisions.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full py-6 px-4 border-t border-gray-800 mt-10">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-wrap justify-center gap-4 mb-4 text-sm">
+                <a href="/" class="text-textSecondary hover:text-accent transition-colors">Dashboard</a>
+                <a href="/about.html" class="text-textSecondary hover:text-accent transition-colors">About Us</a>
+                <a href="/how-to-use.html" class="text-textSecondary hover:text-accent transition-colors">How to Use & FAQ</a>
+                <a href="/privacy.html" class="text-textSecondary hover:text-accent transition-colors">Privacy Policy</a>
+                <a href="/terms.html" class="text-textSecondary hover:text-accent transition-colors">Terms of Service</a>
+            </div>
+            <p class="text-center text-textSecondary text-xs">&copy; 2025 CryptoMood Dash. All rights reserved. Data from <a href="https://alternative.me/crypto/fear-and-greed-index/" class="text-accent hover:underline" rel="noopener noreferrer" target="_blank">Alternative.me</a> &amp; <a href="https://www.coingecko.com/" class="text-accent hover:underline" rel="noopener noreferrer" target="_blank">CoinGecko</a>.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
