@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Fear & Greed Index — Live Market Sentiment Dashboard | CryptoMood Dash</title>
+    <meta name="description" content="Track the Crypto Fear & Greed Index and top cryptocurrency prices in real-time. Free live market sentiment dashboard updated daily.">
+    <meta name="keywords" content="crypto fear and greed index, bitcoin fear greed, crypto market sentiment, cryptocurrency prices, bitcoin price">
+    <link rel="canonical" href="https://cryptomood-dash.vercel.app/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Crypto Fear & Greed Index — Live Market Sentiment Dashboard">
+    <meta property="og:description" content="Track crypto market sentiment and top coin prices in real-time. Free, fast, and updated daily.">
+    <meta property="og:image" content="https://cryptomood-dash.vercel.app/assets/og-image.png">
+    <meta property="og:url" content="https://cryptomood-dash.vercel.app/">
+    <meta property="og:site_name" content="CryptoMood Dash">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Crypto Fear & Greed Index — Live Dashboard">
+    <meta name="twitter:description" content="Track crypto market sentiment and top coin prices in real-time.">
+    <meta name="twitter:image" content="https://cryptomood-dash.vercel.app/assets/og-image.png">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "CryptoMood Dash",
+        "description": "Live Crypto Fear & Greed Index and top cryptocurrency prices dashboard",
+        "url": "https://cryptomood-dash.vercel.app/",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: '#0f1019',
+                        card: '#16213e',
+                        cardHover: '#1e2a4a',
+                        accent: '#00d4aa',
+                        textPrimary: '#e0e0e0',
+                        textSecondary: '#8a8aa0',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-bg text-textPrimary min-h-screen font-sans">
+
+    <header class="w-full py-4 px-4 border-b border-gray-800">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <h1 class="text-xl md:text-2xl font-bold">
+                <span class="text-accent">Crypto</span>Mood Dash
+            </h1>
+            <p class="text-textSecondary text-xs md:text-sm">Live Market Sentiment</p>
+        </div>
+    </header>
+
+    <!-- AD SLOT: Top Banner -->
+    <!-- ADSTERRA BANNER 728x90 — REPLACE data-key WITH YOUR KEY -->
+    <div class="w-full flex justify-center py-2 ad-slot" id="ad-top-banner">
+        <div class="max-w-[728px] w-full h-[90px] bg-card/30 rounded flex items-center justify-center text-textSecondary text-xs border border-dashed border-gray-700">
+            <!-- REPLACE_WITH_ADSTERRA_KEY: Top Banner Ad (728x90) -->
+            Ad Space — Top Banner
+        </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto px-4 py-6">
+
+        <!-- Fear & Greed Gauge Section -->
+        <section id="gauge-section" class="mb-8" aria-label="Fear and Greed Index">
+            <h2 class="text-lg md:text-xl font-semibold mb-4 text-center">Fear & Greed Index</h2>
+            <div class="bg-card rounded-2xl p-6 shadow-lg shadow-black/20 max-w-md mx-auto">
+                <div class="flex justify-center mb-4">
+                    <canvas id="gauge-canvas" width="280" height="160" aria-label="Fear and Greed gauge showing current market sentiment"></canvas>
+                </div>
+                <div class="text-center">
+                    <p id="gauge-value" class="text-4xl font-bold text-accent">--</p>
+                    <p id="gauge-label" class="text-lg text-textSecondary mt-1">Loading...</p>
+                    <p id="gauge-timestamp" class="text-xs text-textSecondary mt-2">--</p>
+                </div>
+                <div class="grid grid-cols-3 gap-3 mt-5 pt-4 border-t border-gray-700">
+                    <div class="text-center">
+                        <p class="text-xs text-textSecondary">Yesterday</p>
+                        <p id="fng-yesterday" class="text-sm font-semibold mt-1">--</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-xs text-textSecondary">Last Week</p>
+                        <p id="fng-week" class="text-sm font-semibold mt-1">--</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-xs text-textSecondary">Last Month</p>
+                        <p id="fng-month" class="text-sm font-semibold mt-1">--</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Coins Section -->
+        <section id="coins-section" class="mb-8" aria-label="Top Cryptocurrency Prices">
+            <h2 class="text-lg md:text-xl font-semibold mb-4 text-center">Top 10 Cryptocurrencies</h2>
+            <div id="coins-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+                <!-- Coin cards rendered by js/coins.js -->
+            </div>
+            <div id="coins-loading" class="text-center text-textSecondary py-8">Loading coin data...</div>
+            <div id="coins-error" class="text-center text-red-400 py-4 hidden"></div>
+        </section>
+
+        <!-- AD SLOT: Native Banner between content and footer -->
+        <div class="w-full flex justify-center py-4 ad-slot" id="ad-native-banner">
+            <div class="max-w-[728px] w-full h-[120px] bg-card/30 rounded flex items-center justify-center text-textSecondary text-xs border border-dashed border-gray-700">
+                <!-- REPLACE_WITH_ADSTERRA_KEY: Native Banner Ad -->
+                Ad Space — Native Banner
+            </div>
+        </div>
+
+        <!-- Check Sentiment Button (triggers Google Sheets webhook) -->
+        <div class="text-center my-6">
+            <button id="check-sentiment-btn" class="bg-accent/20 hover:bg-accent/30 text-accent border border-accent/40 px-6 py-3 rounded-xl font-semibold transition-colors duration-200 text-sm">
+                Check Sentiment
+            </button>
+            <p id="sheets-status" class="text-xs text-textSecondary mt-2"></p>
+        </div>
+
+    </main>
+
+    <footer class="w-full py-6 px-4 border-t border-gray-800 mt-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+            <p class="text-textSecondary text-xs">&copy; 2026 CryptoMood Dash. Data from <a href="https://alternative.me/crypto/fear-and-greed-index/" class="text-accent hover:underline" rel="noopener noreferrer" target="_blank">Alternative.me</a> &amp; <a href="https://www.coingecko.com/" class="text-accent hover:underline" rel="noopener noreferrer" target="_blank">CoinGecko</a>.</p>
+            <div id="visitor-counter" class="text-textSecondary text-xs">
+                Today: <span id="visitors-today">--</span> &middot; Total: <span id="visitors-total">--</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/gauge.js"></script>
+    <script src="js/coins.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/sheets.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

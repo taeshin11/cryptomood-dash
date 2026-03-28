@@ -1,0 +1,75 @@
+/* Custom styles for Crypto Fear & Greed Dash */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body subtle gradient */
+body {
+    background: linear-gradient(180deg, #0f1019 0%, #0d0d17 100%);
+}
+
+/* Card hover effect */
+.coin-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.coin-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Sparkline canvas */
+.sparkline-canvas {
+    display: block;
+}
+
+/* Gauge glow effect */
+#gauge-canvas {
+    filter: drop-shadow(0 0 8px rgba(0, 212, 170, 0.15));
+}
+
+/* Loading pulse animation */
+@keyframes pulse-soft {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+.loading-pulse {
+    animation: pulse-soft 1.5s ease-in-out infinite;
+}
+
+/* Ad slot responsive */
+@media (max-width: 767px) {
+    #ad-top-banner > div {
+        max-width: 320px;
+        height: 50px;
+    }
+    #ad-native-banner > div {
+        height: 80px;
+    }
+}
+
+/* Touch-friendly tap targets */
+button, a {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #0f1019;
+}
+::-webkit-scrollbar-thumb {
+    background: #2a2a4a;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #3a3a5a;
+}
+
+/* Price change colors */
+.price-up { color: #00d4aa; }
+.price-down { color: #ff6b6b; }

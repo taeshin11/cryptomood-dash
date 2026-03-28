@@ -1,0 +1,7 @@
+== Crypto Fear & Greed Dash — Progress Log ==
+
+[2026-03-28] M1 — Project Scaffold
+- Status: COMPLETE
+- Created: file structure, feature_list.json, claude-progress.txt, init.sh
+- Created: index.html, css/style.css, js/app.js, js/gauge.js, js/coins.js, js/counter.js, js/sheets.js
+- Next: M2 — Fear & Greed gauge with live API

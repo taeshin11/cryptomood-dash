@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cryptomood-dash.vercel.app/sitemap.xml
