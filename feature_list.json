@@ -7,5 +7,5 @@
   { "id": "M6-counter", "milestone": "M6", "feature": "Visitor counter integration", "status": "done" },
   { "id": "M7-sheets", "milestone": "M7", "feature": "Google Sheets webhook + Apps Script code", "status": "done" },
   { "id": "M8-ads", "milestone": "M8", "feature": "Adsterra ad slot placeholders with setup docs", "status": "done" },
-  { "id": "M9-deploy", "milestone": "M9", "feature": "Final polish, testing, deploy to Vercel/Netlify", "status": "pending" }
+  { "id": "M9-deploy", "milestone": "M9", "feature": "Final polish, testing, deploy to Vercel/Netlify", "status": "done" }
 ]
