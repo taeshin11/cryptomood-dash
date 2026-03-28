@@ -1,11 +1,11 @@
 [
   { "id": "M1-scaffold", "milestone": "M1", "feature": "Project scaffold, file structure, init.sh, feature_list.json", "status": "done" },
-  { "id": "M2-gauge", "milestone": "M2", "feature": "Fear & Greed semicircular gauge with live API data", "status": "pending" },
-  { "id": "M3-coins", "milestone": "M3", "feature": "Top 10 coin prices grid with live CoinGecko data", "status": "pending" },
-  { "id": "M4-responsive", "milestone": "M4", "feature": "Responsive design + soft dark color theme", "status": "pending" },
-  { "id": "M5-seo", "milestone": "M5", "feature": "SEO meta tags, sitemap, robots.txt, structured data", "status": "pending" },
-  { "id": "M6-counter", "milestone": "M6", "feature": "Visitor counter integration", "status": "pending" },
-  { "id": "M7-sheets", "milestone": "M7", "feature": "Google Sheets webhook + Apps Script code", "status": "pending" },
-  { "id": "M8-ads", "milestone": "M8", "feature": "Adsterra ad slot placeholders with setup docs", "status": "pending" },
+  { "id": "M2-gauge", "milestone": "M2", "feature": "Fear & Greed semicircular gauge with live API data", "status": "done" },
+  { "id": "M3-coins", "milestone": "M3", "feature": "Top 10 coin prices grid with live CoinGecko data", "status": "done" },
+  { "id": "M4-responsive", "milestone": "M4", "feature": "Responsive design + soft dark color theme", "status": "done" },
+  { "id": "M5-seo", "milestone": "M5", "feature": "SEO meta tags, sitemap, robots.txt, structured data", "status": "done" },
+  { "id": "M6-counter", "milestone": "M6", "feature": "Visitor counter integration", "status": "done" },
+  { "id": "M7-sheets", "milestone": "M7", "feature": "Google Sheets webhook + Apps Script code", "status": "done" },
+  { "id": "M8-ads", "milestone": "M8", "feature": "Adsterra ad slot placeholders with setup docs", "status": "done" },
   { "id": "M9-deploy", "milestone": "M9", "feature": "Final polish, testing, deploy to Vercel/Netlify", "status": "pending" }
 ]
