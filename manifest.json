@@ -1,0 +1,25 @@
+{
+    "name": "CryptoMood Dash — Crypto Fear & Greed Index",
+    "short_name": "CryptoMood",
+    "description": "Live Crypto Fear & Greed Index and top cryptocurrency prices dashboard",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0f1019",
+    "theme_color": "#00d4aa",
+    "orientation": "portrait-primary",
+    "categories": ["finance", "business"],
+    "icons": [
+        {
+            "src": "/assets/icon-192.svg",
+            "sizes": "192x192",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "/assets/og-image.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        }
+    ]
+}

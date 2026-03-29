@@ -73,3 +73,25 @@ button, a {
 /* Price change colors */
 .price-up { color: #00d4aa; }
 .price-down { color: #ff6b6b; }
+
+/* Share buttons hover */
+#share-section a:hover svg,
+#share-section button:hover svg {
+    color: #00d4aa;
+}
+
+/* Smooth fade-in for content */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+#gauge-section, #coins-section {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Focus styles for accessibility */
+a:focus-visible, button:focus-visible {
+    outline: 2px solid #00d4aa;
+    outline-offset: 2px;
+    border-radius: 4px;
+}

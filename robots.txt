@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
+Allow: /about.html
+Allow: /how-to-use.html
+Allow: /privacy.html
+Allow: /terms.html
+
+Disallow: /assets/
 
 Sitemap: https://cryptomood-dash.vercel.app/sitemap.xml

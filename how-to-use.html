@@ -3,23 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00d4aa">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7098271335538021" crossorigin="anonymous"></script>
-    <title>How to Use & FAQ — CryptoMood Dash | Crypto Sentiment Guide</title>
-    <meta name="description" content="Learn how to use CryptoMood Dash to track crypto market sentiment. Step-by-step guide and frequently asked questions about the Fear & Greed Index.">
-    <meta name="keywords" content="how to use fear and greed index, crypto sentiment guide, bitcoin fear greed FAQ, cryptocurrency market mood, crypto trading tool">
+    <title>How to Use the Crypto Fear & Greed Index — Guide & FAQ | CryptoMood Dash</title>
+    <meta name="description" content="Learn how to read the Crypto Fear & Greed Index and use it for better trading decisions. Step-by-step guide, FAQ, and expert tips on crypto market sentiment analysis.">
+    <meta name="keywords" content="how to use fear and greed index, crypto sentiment guide, what is fear and greed index, bitcoin fear greed FAQ, how to read fear greed index, cryptocurrency market mood, crypto trading tool, crypto indicator explained">
     <link rel="canonical" href="https://cryptomood-dash.vercel.app/how-to-use.html">
+    <link rel="manifest" href="/manifest.json">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="How to Use CryptoMood Dash — Guide & FAQ">
     <meta property="og:description" content="Step-by-step guide on using the Crypto Fear & Greed Index dashboard, plus answers to common questions.">
-    <meta property="og:image" content="https://cryptomood-dash.vercel.app/assets/og-image.svg">
+    <meta property="og:image" content="https://cryptomood-dash.vercel.app/assets/og-image.png">
     <meta property="og:url" content="https://cryptomood-dash.vercel.app/how-to-use.html">
     <meta property="og:site_name" content="CryptoMood Dash">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="How to Use CryptoMood Dash — Guide & FAQ">
     <meta name="twitter:description" content="Step-by-step guide and FAQ for the Crypto Fear & Greed Index dashboard.">
-    <meta name="twitter:image" content="https://cryptomood-dash.vercel.app/assets/og-image.svg">
+    <meta name="twitter:image" content="https://cryptomood-dash.vercel.app/assets/og-image.png">
+
+    <!-- FAQPage Schema for Google Rich Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the Crypto Fear & Greed Index?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Crypto Fear & Greed Index is a daily metric developed by Alternative.me that measures the overall emotional sentiment of the cryptocurrency market on a scale of 0 to 100. It analyzes six data sources: market volatility (25%), trading volume and momentum (25%), social media activity (15%), investor surveys (15%), Bitcoin dominance (10%), and Google Trends (10%). A score of 0 represents Extreme Fear, while 100 represents Extreme Greed."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How often is the Fear & Greed Index updated?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Fear & Greed Index is calculated once per day by Alternative.me, typically around 00:00 UTC. On CryptoMood Dash, the gauge checks for new data every 5 minutes. Cryptocurrency prices refresh automatically every 60 seconds from CoinGecko, which aggregates data from over 800 exchanges worldwide."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Should I buy crypto when the index shows Extreme Fear?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Historically, buying during periods of Extreme Fear (index below 20) and holding for 30+ days has often resulted in positive returns. However, this is not financial advice. Extreme Fear can persist during bear markets, and the index doesn't account for fundamental changes like regulation or exchange collapses. Always use the index as one of many tools, never as the sole indicator."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why does CryptoMood Dash only show 10 cryptocurrencies?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CryptoMood Dash is designed as a quick-glance dashboard. The top 10 cryptocurrencies by market cap represent over 85% of total crypto market value. By focusing on these coins, the dashboard stays clean, fast-loading, and scannable in seconds. For detailed altcoin data, use CoinGecko or CoinMarketCap."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is CryptoMood Dash free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, CryptoMood Dash is completely free and always will be. No account registration, no premium tier, no hidden paywalls. All data comes from free, publicly available APIs. The dashboard is supported by non-intrusive advertising."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use CryptoMood Dash on my phone?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. CryptoMood Dash is built with a mobile-first responsive design that works on any screen size from 320px smartphones to 4K desktops. You can add it to your phone's home screen for an app-like experience without browser controls."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How accurate is the cryptocurrency price data?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Prices are sourced from CoinGecko, which aggregates real-time data from over 800 cryptocurrency exchanges. Prices shown are volume-weighted averages. They refresh every 60 seconds, so slight differences vs real-time trading platforms are expected. For actual trading, use your exchange's live order book."
+                }
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://cryptomood-dash.vercel.app/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "How to Use & FAQ",
+                "item": "https://cryptomood-dash.vercel.app/how-to-use.html"
+            }
+        ]
+    }
+    </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -232,7 +322,7 @@
                 <a href="/privacy.html" class="text-textSecondary hover:text-accent transition-colors">Privacy Policy</a>
                 <a href="/terms.html" class="text-textSecondary hover:text-accent transition-colors">Terms of Service</a>
             </div>
-            <p class="text-center text-textSecondary text-xs">&copy; 2025 CryptoMood Dash. All rights reserved. Data from <a href="https://alternative.me/crypto/fear-and-greed-index/" class="text-accent hover:underline" rel="noopener noreferrer" target="_blank">Alternative.me</a> &amp; <a href="https://www.coingecko.com/" class="text-accent hover:underline" rel="noopener noreferrer" target="_blank">CoinGecko</a>.</p>
+            <p class="text-center text-textSecondary text-xs">&copy; 2025–2026 CryptoMood Dash. All rights reserved. <a href="mailto:taeshinkim11@gmail.com?subject=CryptoMood%20Dash%20Feedback" class="text-accent hover:underline">Send Feedback</a> &middot; Data from <a href="https://alternative.me/crypto/fear-and-greed-index/" class="text-accent hover:underline" rel="noopener noreferrer" target="_blank">Alternative.me</a> &amp; <a href="https://www.coingecko.com/" class="text-accent hover:underline" rel="noopener noreferrer" target="_blank">CoinGecko</a>.</p>
         </div>
     </footer>
 
