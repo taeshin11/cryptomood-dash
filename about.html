@@ -6,6 +6,12 @@
     <meta name="theme-color" content="#00d4aa">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="alternate" hreflang="x-default" href="https://cryptomood-dash.vercel.app/about.html">
+    <link rel="alternate" hreflang="en" href="https://cryptomood-dash.vercel.app/about.html">
+    <link rel="alternate" hreflang="ko" href="https://cryptomood-dash.vercel.app/about.html">
+    <link rel="alternate" hreflang="ja" href="https://cryptomood-dash.vercel.app/about.html">
+    <link rel="alternate" hreflang="zh" href="https://cryptomood-dash.vercel.app/about.html">
+    <link rel="alternate" hreflang="es" href="https://cryptomood-dash.vercel.app/about.html">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7098271335538021" crossorigin="anonymous"></script>
     <title>About CryptoMood Dash — Free Crypto Fear & Greed Index Dashboard</title>
     <meta name="description" content="CryptoMood Dash is a free, real-time cryptocurrency market sentiment dashboard. Track the Fear & Greed Index and top 10 coin prices at a glance. No account needed.">
@@ -61,9 +67,9 @@
             <a href="/" class="text-xl md:text-2xl font-bold hover:opacity-90">
                 <span class="text-accent">Crypto</span>Mood Dash
             </a>
-            <nav class="flex gap-4 text-sm text-textSecondary">
-                <a href="/" class="hover:text-accent transition-colors">Dashboard</a>
-                <a href="/about.html" class="text-accent">About</a>
+            <nav class="flex items-center gap-3 md:gap-4 text-xs md:text-sm text-textSecondary">
+                <a href="/" class="hover:text-accent transition-colors" data-i18n="nav.dashboard">Dashboard</a>
+                <a href="/about.html" class="text-accent" data-i18n="nav.about">About</a>
             </nav>
         </div>
     </header>
@@ -235,5 +241,14 @@
         </div>
     </footer>
 
+    <!-- i18n + Feedback -->
+    <script src="js/i18n.js"></script>
+    <script src="js/feedback.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            I18n.init();
+            FeedbackWidget.init();
+        });
+    </script>
 </body>
 </html>

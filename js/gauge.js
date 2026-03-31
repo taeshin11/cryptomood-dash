@@ -1,4 +1,4 @@
-// gauge.js — Fear & Greed semicircular gauge renderer
+// gauge.js — Fear & Greed semicircular gauge renderer with i18n support
 
 const Gauge = {
     canvas: null,
@@ -23,6 +23,7 @@ const Gauge = {
     },
 
     getLabel(value) {
+        if (typeof I18n !== 'undefined') return I18n.getSentimentLabel(value);
         if (value <= 20) return 'Extreme Fear';
         if (value <= 40) return 'Fear';
         if (value <= 60) return 'Neutral';
@@ -124,6 +125,7 @@ const Gauge = {
 
             const current = data[0];
             const value = parseInt(current.value);
+            const updatedLabel = (typeof I18n !== 'undefined') ? I18n.t('gauge.updated') : 'Updated';
 
             // Update UI
             document.getElementById('gauge-value').textContent = value;
@@ -132,7 +134,7 @@ const Gauge = {
             document.getElementById('gauge-value').style.color = this.getColor(value);
 
             const date = new Date(parseInt(current.timestamp) * 1000);
-            document.getElementById('gauge-timestamp').textContent = 'Updated: ' + date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+            document.getElementById('gauge-timestamp').textContent = updatedLabel + ': ' + date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
             // Historical values
             if (data.length > 1) {
@@ -155,7 +157,8 @@ const Gauge = {
             return { value, label: current.value_classification };
         } catch (err) {
             console.error('Fear & Greed fetch error:', err);
-            document.getElementById('gauge-label').textContent = 'Failed to load';
+            const failedLabel = (typeof I18n !== 'undefined') ? I18n.t('gauge.failed') : 'Failed to load';
+            document.getElementById('gauge-label').textContent = failedLabel;
             return null;
         }
     }

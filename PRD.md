@@ -5,7 +5,7 @@
 ## Short Title: Crypto Market Index
 
 ---
-
+1
 ## 0. How To Use This Document (Harness Instructions for Claude Code)
 
 This PRD follows the **Harness Design Method**. Claude Code must operate autonomously using the structure below. **No human intervention should be needed between milestones.**

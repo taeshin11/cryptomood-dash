@@ -95,3 +95,61 @@ a:focus-visible, button:focus-visible {
     outline-offset: 2px;
     border-radius: 4px;
 }
+
+/* Feedback floating button */
+#feedback-fab {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#feedback-fab:hover {
+    box-shadow: 0 4px 20px rgba(0, 212, 170, 0.25);
+}
+
+/* Feedback modal animation */
+#feedback-overlay {
+    transition: opacity 0.2s ease;
+}
+#feedback-modal {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Language selector styling */
+#lang-selector {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238a8aa0' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 6px center;
+    padding-right: 22px;
+    min-height: 32px;
+    min-width: auto;
+}
+
+/* PWA install banner animation */
+#pwa-install-banner {
+    animation: slideUp 0.4s ease-out;
+}
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RTL support for Arabic */
+[dir="rtl"] #feedback-fab {
+    right: auto;
+    left: 1.25rem;
+}
+[dir="rtl"] #pwa-install-banner {
+    right: auto;
+    left: 1.25rem;
+}
+[dir="rtl"] #lang-selector {
+    background-position: left 6px center;
+    padding-right: 8px;
+    padding-left: 22px;
+}
+
+/* Print styles */
+@media print {
+    #feedback-fab, #pwa-install-banner, #ad-top-banner, #ad-native-banner, #share-section {
+        display: none !important;
+    }
+}

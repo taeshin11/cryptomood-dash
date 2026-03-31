@@ -41,8 +41,8 @@
             <a href="/" class="text-xl md:text-2xl font-bold hover:opacity-90">
                 <span class="text-accent">Crypto</span>Mood Dash
             </a>
-            <nav class="flex gap-4 text-sm text-textSecondary">
-                <a href="/" class="hover:text-accent transition-colors">Dashboard</a>
+            <nav class="flex items-center gap-3 md:gap-4 text-xs md:text-sm text-textSecondary">
+                <a href="/" class="hover:text-accent transition-colors" data-i18n="nav.dashboard">Dashboard</a>
                 <a href="/terms.html" class="text-accent">Terms</a>
             </nav>
         </div>
@@ -217,5 +217,14 @@
         </div>
     </footer>
 
+    <!-- i18n + Feedback -->
+    <script src="js/i18n.js"></script>
+    <script src="js/feedback.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            I18n.init();
+            FeedbackWidget.init();
+        });
+    </script>
 </body>
 </html>
