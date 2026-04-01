@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx vercel:*)",
+      "WebFetch(domain:cryptomood-dash.vercel.app)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(curl -s https://cryptomood-dash.vercel.app/)",
+      "Bash(curl -s https://cryptomood-dash.vercel.app/js/app.js)"
+    ]
+  }
+}
